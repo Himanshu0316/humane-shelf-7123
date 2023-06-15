@@ -24,7 +24,7 @@ const getAllProductsError = (payload) => {
 const getAllProductsAPI = (payload) => (dispatch) => {
   dispatch(getAllProductsLoading(payload));
   axios
-    .get(`/products/alldata`)
+    .get(`https://tatabackend.vercel.app/products/alldata`)
     .then((r) => dispatch(getAllProductsSuccess(r.data.data)))
     .catch((e) => dispatch(getAllProductsError(e.data)));
 };
